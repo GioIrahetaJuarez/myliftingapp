@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Link } from "expo-router";
 import { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import workoutPlanDefault from '../../assets/jsonPref/workoutPlan';
@@ -167,6 +168,7 @@ function TodayBoard() {
                     onFinished={handleFinished}
                 />
             ))}
+            <Link href='/Stats' style={{ color: 'blue', paddingHorizontal: 8 }}>Stats</Link>
         </ScrollView>
     );
 }
@@ -209,6 +211,7 @@ function ExerciseItem({ exercise, groupIndex, exerciseIndex, isHidden, onFinishe
             >
                 <Text style={styles.doneButtonText}>Done</Text>
             </Pressable>
+            
         </View>
     );
 }
