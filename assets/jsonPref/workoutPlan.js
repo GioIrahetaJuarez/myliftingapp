@@ -1,87 +1,90 @@
 const workoutPlan = [
     {
-        splitDay: 'Push',
+        name: 'Push',
+        orderIndex: 0,
         groups: [
             {
-                group: 'Chest',
+                name: 'Chest',
                 exercises: [
-                    'Bench Press',
-                    'Incline Dumbbell Press',
-                    'Cable Flyes'
+                    { name: 'Bench Press' },
+                    { name: 'Incline Dumbbell Press' },
+                    { name: 'Cable Flyes' }
                 ]
             },
             {
-                group: 'Shoulders',
+                name: 'Shoulders',
                 exercises: [
-                    'Overhead Press',
-                    'Lateral Raises',
-                    'Front Raises'
+                    { name: 'Overhead Press' },
+                    { name: 'Lateral Raises' },
+                    { name: 'Front Raises' }
                 ]
             },
             {
-                group: 'Triceps',
+                name: 'Triceps',
                 exercises: [
-                    'Tricep Dips',
-                    'Overhead Tricep Extension',
-                    'Tricep Pushdowns'
+                    { name: 'Tricep Dips' },
+                    { name: 'Overhead Tricep Extension' },
+                    { name: 'Tricep Pushdowns' }
                 ]
             }
         ]
     },
     {
-        splitDay: 'Pull',
+        name: 'Pull',
+        orderIndex: 1,
         groups: [
             {
-                group: 'Back',
+                name: 'Back',
                 exercises: [
-                    'Deadlifts',
-                    'Pull-ups',
-                    'Barbell Rows'
+                    { name: 'Deadlifts' },
+                    { name: 'Pull-ups' },
+                    { name: 'Barbell Rows' }
                 ]
             },
             {
-                group: 'Biceps',
+                name: 'Biceps',
                 exercises: [
-                    'Barbell Curls',
-                    'Hammer Curls',
-                    'Concentration Curls'
+                    { name: 'Barbell Curls' },
+                    { name: 'Hammer Curls' },
+                    { name: 'Concentration Curls' }
                 ]
             },
             {
-                group: 'Rear Delts',
+                name: 'Rear Delts',
                 exercises: [
-                    'Face Pulls',
-                    'Reverse Flyes',
-                    'Bent Over Lateral Raises'
+                    { name: 'Face Pulls' },
+                    { name: 'Reverse Flyes' },
+                    { name: 'Bent Over Lateral Raises' }
                 ]
             }
         ]
     },
     {
-        splitDay: 'Legs',
+        name: 'Legs',
+        orderIndex: 2,
         groups: [
             {
-                group: 'Quads',
+                name: 'Quads',
                 exercises: [
-                    'Squats',
-                    'Leg Press',
-                    'Leg Extensions'
+                    { name: 'Squats' },
+                    { name: 'Leg Press' },
+                    { name: 'Leg Extensions' }
                 ]
             },
             {
-                group: 'Hamstrings',
+                name: 'Hamstrings',
                 exercises: [
-                    'Romanian Deadlifts',
-                    'Leg Curls',
-                    'Walking Lunges'
+                    { name: 'Romanian Deadlifts' },
+                    { name: 'Leg Curls' },
+                    { name: 'Walking Lunges' }
                 ]
             },
             {
-                group: 'Calves',
+                name: 'Calves',
                 exercises: [
-                    'Standing Calf Raises',
-                    'Seated Calf Raises',
-                    'Calf Press on Leg Press'
+                    { name: 'Standing Calf Raises' },
+                    { name: 'Seated Calf Raises' },
+                    { name: 'Calf Press on Leg Press' }
                 ]
             }
         ]

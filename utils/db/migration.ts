@@ -5,12 +5,15 @@ export const initDatabase = () => {
     --Split Plan ------------------------------------------
     CREATE TABLE IF NOT EXISTS split_day (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL
+        name TEXT NOT NULL,
+        order_index INTEGER NOT NULL UNIQUE
     );
 
     CREATE TABLE IF NOT EXISTS muscle_group (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL
+        name TEXT NOT NULL,
+        split_day INTEGER,
+        FOREIGN KEY (split_day) REFERENCES split_day(id)
     );
 
     CREATE TABLE IF NOT EXISTS exercise (
@@ -23,10 +26,10 @@ export const initDatabase = () => {
     --History log ----------------------------------------
     CREATE TABLE IF NOT EXISTS workout_log (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      split_day INTEGER,
+      split_day TEXT NOT NULL,
       date TEXT NOT NULL,
       UNIQUE(date),
-      FOREIGN KEY (split_day) REFERENCES split_day(id)
+      FOREIGN KEY (split_day) REFERENCES split_day(name)
     );
 
     CREATE TABLE IF NOT EXISTS complete_exercise (
